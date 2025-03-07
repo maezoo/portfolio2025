@@ -45,13 +45,12 @@ body {
 
 main {
   width: 100%;
-
-  .tab_title {
-    font-size: 2.5rem;
-    letter-spacing: 3px;
-  }
 }
-
+// ================ 공통클래스 =========================
+.tab_title {
+  font-size: 5rem;
+}
+// =========================================
 .hover_effect {
   font-family: "InkLipquid";
   font-size: 1.8rem;
@@ -63,6 +62,7 @@ main {
   font-size: 2.2rem;
 }
 
+//hover the screen
 .animate__flash {
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -79,9 +79,8 @@ main {
 // ======================================
 
 h1 {
-  font-size: 6em;
-  font-size: calc(2em + 2vw);
-  margin: 0;
+  //   font-size: calc(2em + 2vw);
+  //   margin: 0;
 }
 
 .fp-section:nth-child(1) {

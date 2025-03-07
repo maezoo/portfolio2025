@@ -1,18 +1,14 @@
 .coding {
-  // .animate__flash {
-  //   animation-duration: 3s;
-  //   animation-iteration-count: infinite;
-  // }
 }
 
-article {
+.slide {
   .slide-content {
     // padding: 2% 10% 0%;
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 50px;
   }
@@ -57,8 +53,7 @@ article {
         .hd-img {
           img {
             width: 100%;
-            // height: 100%;
-            object-fit: contain;
+            height: 100%;
           }
         }
 
@@ -68,7 +63,6 @@ article {
           background: url(/images/phone-cream-slide.JPG) no-repeat;
           background-size: cover;
           transition: background-position 2s linear;
-
           &:hover {
             background-position: 100% 100%;
           }
@@ -149,9 +143,10 @@ article {
       display: flex;
       flex-direction: column;
       gap: 5px;
+
       span {
         color: #ff6347;
-        font-weight: 500;
+        // font-weight: 500;
       }
     }
 

@@ -23,6 +23,27 @@ var myFullpage = new fullpage('#fullpage', {
 
 
 
+// =======================================================
+// 팝업 열기 + 닫기 =========================================
+
+document.querySelectorAll('.design_box').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.detail_pop').forEach(pop => {
+      pop.style.display = 'none';
+    });
+
+    const tab = item.getAttribute('data-tab');
+    const popUp = document.querySelector(`#${tab}`);
+    popUp.style.display = 'flex';
+  });
+});
+
+document.querySelectorAll('.detail_img').forEach(closeBtn => {
+  closeBtn.addEventListener('click', (event) => {
+    const popUp = event.target.closest('.detail_pop');
+    popUp.style.display = 'none';
+  });
+});
 
 
 // function setViewportHeight() {
@@ -33,6 +54,8 @@ var myFullpage = new fullpage('#fullpage', {
 // setViewportHeight();
 
 // window.addEventListener('resize', setViewportHeight);
+
+
 // // =======================================================
 // // coding fullpage ========================================
 // $(document).ready(function () {
@@ -78,27 +101,7 @@ var myFullpage = new fullpage('#fullpage', {
 //   slidesPerView: 1,
 //   slidesPerGroup: 1,
 // });
-// // =======================================================
-// // 팝업 열기 + 닫기 =========================================
 
-// document.querySelectorAll('.design_box').forEach(item => {
-//   item.addEventListener('click', () => {
-//     document.querySelectorAll('.detail_pop').forEach(pop => {
-//       pop.style.display = 'none';
-//     });
-
-//     const tab = item.getAttribute('data-tab');
-//     const popUp = document.querySelector(`#${tab}`);
-//     popUp.style.display = 'flex';
-//   });
-// });
-
-// document.querySelectorAll('.detail_img').forEach(closeBtn => {
-//   closeBtn.addEventListener('click', (event) => {
-//     const popUp = event.target.closest('.detail_pop');
-//     popUp.style.display = 'none';
-//   });
-// });
 
 // // =======================================================
 // // 인트로 화면전환 ===========================================
@@ -231,27 +234,11 @@ var myFullpage = new fullpage('#fullpage', {
 // //   slidesPerView: 1,
 // //   slidesPerGroup: 1,
 // // });
-// // // =======================================================
-// // // 팝업 열기 + 닫기 =========================================
 
-// // document.querySelectorAll('.design_box').forEach(item => {
-// //   item.addEventListener('click', () => {
-// //     document.querySelectorAll('.detail_pop').forEach(pop => {
-// //       pop.style.display = 'none';
-// //     });
+// // =======================================================
+// // 팝업 열기 + 닫기 =========================================
 
-// //     const tab = item.getAttribute('data-tab');
-// //     const popUp = document.querySelector(`#${tab}`);
-// //     popUp.style.display = 'flex';
-// //   });
-// // });
 
-// // document.querySelectorAll('.detail_img').forEach(closeBtn => {
-// //   closeBtn.addEventListener('click', (event) => {
-// //     const popUp = event.target.closest('.detail_pop');
-// //     popUp.style.display = 'none';
-// //   });
-// // });
 
 // // // =======================================================
 // // // 인트로 화면전환 ===========================================

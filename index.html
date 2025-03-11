@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2025</title>
   <link rel="icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="/styles/style.scss">
   <script src="/js/main.js" type="module"></script>
 </head>
@@ -353,47 +356,56 @@
       </article>
       <article class="slide clone_5">
         <div class="section_inner-2">
-          <h1 class="tab_title">CODING</h1>
+          <h1 class="tab_title">Themed Web Projects</h1>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide pra pra_E">
-                <div class="img-wrap E-class">
-                  <img src="/images/pra_e-class.JPG" alt="">
+                <h2>[Automotive]</h2>
+                <div class="project-content">
+                  <div class="img-wrap">
+                    <img src="/images/pra_e-class.JPG" alt="">
+                  </div>
+                  <button>
+                    <a href="https://maezoo.github.io/The-new-E-Class/" target="_blank">
+                      <p>Explore Projects</p>
+                    </a>
+                  </button>
                 </div>
-                <button>
-                  <a href="https://maezoo.github.io/The-new-E-Class/" target="_blank">
-                    <p>TRANSFORMATION</p>
-                  </a>
-                </button>
               </div>
               <div class="swiper-slide pra pra_beauty">
-                <div class="img-wrap sqa">
-                  <img src="/images/pra_beauty-store.JPG" alt="">
+                <h2>[Lifestyle]</h2>
+                <div class="project-content">
+                  <div class="img-wrap sqa">
+                    <img src="/images/pra_beauty-store.JPG" alt="">
+                  </div>
+                  <button>
+                    <a href="https://maezoo.github.io/beauty-store/" target="_blank">
+                      <p>Explore Projects</p>
+                    </a>
+                  </button>
                 </div>
-                <button>
-                  <a href="https://maezoo.github.io/beauty-store/" target="_blank">
-                    <p>TRANSFORMATION</p>
-                  </a>
-                </button>
               </div>
               <div class="swiper-slide pra pra_shop">
-                <div class="img-wrap shop">
-                  <img src="/images/pra_shopping-app.png" alt="">
+                <h2>[E-commerce & Shopping]</h2>
+                <div class="project-content">
+                  <div class="img-wrap">
+                    <img src="/images/pra_shopping-app.png" alt="">
+                  </div>
+                  <button>
+                    <a href="https://maezoo.github.io/shopping-app/" target="_blank">
+                      <p>Explore Projects</p>
+                    </a>
+                  </button>
                 </div>
-                <button>
-                  <a href="https://maezoo.github.io/shopping-app/" target="_blank">
-                    <p>TRANSFORMATION</p>
-                  </a>
-                </button>
               </div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
           </div>
-          <div class="go-top">
+          <!-- <div class="go-top">
             <img src="/images/go-top.svg" alt="">
-          </div>
+          </div> -->
         </div>
       </article>
     </div>
@@ -442,10 +454,6 @@
       </div>
     </div>
 
-
-
-
-
     <div class="section aboutMe">
       <article class="aboutMe-content">
         <h1 class="tab_title">ABOUT ME</h1>
@@ -465,7 +473,7 @@
 
           <div class="resume">
             <div class="meBox_1">
-              <div class="profile meBox_detail">
+              <div class="profile">
                 <h2>진연희 Yeonhee Jin</h2>
                 <div>
                   <p>Birth &nbsp; 1993. 12. 29</p>
@@ -473,7 +481,7 @@
                   <p>E-mail &nbsp; tsu0022@gmail.com</p>
                 </div>
               </div>
-              <div class="license meBox_detail">
+              <div class="license">
                 <h2>License</h2>
                 <p>컴퓨터활용능력 2급</p>
                 <h6>2023.10</h6>
@@ -482,7 +490,7 @@
                 <p>2종 보통 운전면허</p>
                 <h6>2022.09</h6>
               </div>
-              <div class="personality meBox_detail">
+              <div class="personality">
                 <h2>Personality</h2>
                 <p># ESTJ</p>
                 <p># 책임감 있는</p>
@@ -491,7 +499,7 @@
                 <p># 뛰어난 수용력 및 적응력</p>
               </div>
             </div>
-            <div class="education">
+            <div class="meBox_2 education  meBox_detail">
               <h2>Education</h2>
               <p>계명문화대학교 패션디자인과 졸업</p>
               <h6>2012.03 ~ 2014.02</h6>
@@ -504,15 +512,15 @@
               </p>
               <h6>2024.03 ~ 2024.07</h6>
             </div>
-            <div class="meBox_2">
-              <div class="experience meBox_detail">
+            <div class="meBox_3 meBox_detail">
+              <div class="experience">
                 <h2>Experience</h2>
                 <p>캐나다 워킹홀리데이</p>
                 <h6>2016.10 ~ 2017.09</h6>
                 <p>올리브영 파트타이머</p>
                 <h6>2019.02 ~ 2024.02</h6>
               </div>
-              <div class="performance meBox_detail">
+              <div class="performance">
                 <h2>Skill</h2>
                 <ul>
                   <li>
@@ -537,7 +545,6 @@
         </div>
       </article>
     </div>
-
 
   </div>
 

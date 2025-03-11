@@ -7,12 +7,15 @@ var myFullpage = new fullpage('#fullpage', {
 
   // Get your license at https://alvarotrigo.com/fullPage/pricing
   licenseKey: 'xxxxxxxxxxxxxxxxxxxxxxxxx',
-
+  scrollBar: false,
+  // navigation: true,
+  slidesNavigation: true,
+  slidesNavigationPosition: 'bottom',
+  // navigationPosition: 'bottom',
   // autoScrolling: true,
   // scrollBar: false
 
   // autoScrolling: true,
-  // scrollBar: false,
   // scrollingSpeed: 700,        // 스크롤 속도 (기본값: 700)
   // fitToSection: true,         // 섹션을 화면에 맞추기
   // touchSensitivity: 15,       // 터치/스크롤 감도 (기본값: 5) - 숫자가 작을수록 민감
@@ -20,8 +23,6 @@ var myFullpage = new fullpage('#fullpage', {
   // easingcss3: 'ease-out'
 
 });
-
-
 
 // =======================================================
 // 팝업 열기 + 닫기 =========================================
@@ -45,6 +46,27 @@ document.querySelectorAll('.detail_img').forEach(closeBtn => {
   });
 });
 
+
+// // =======================================================
+// // clone_5 스와이퍼 ========================================
+var swiper = new Swiper(".mySwiper", {
+
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // autoplay: {
+  //   delay: 10000,
+  // },
+  keyboard: true,
+  loop: true,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+});
 
 // function setViewportHeight() {
 //   let vh = window.innerHeight * 0.01;
@@ -79,27 +101,6 @@ document.querySelectorAll('.detail_img').forEach(closeBtn => {
 //   goTopBtn.addEventListener('click', function () {
 //     $.fn.fullpage.moveTo(1);
 //   });
-// });
-
-// // =======================================================
-// // clone_5 스와이퍼 ========================================
-// var swiper = new Swiper(".mySwiper", {
-
-//   pagination: {
-//     el: ".swiper-pagination",
-//     type: "fraction",
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   autoplay: {
-//     delay: 10000,
-//   },
-//   keyboard: true,
-//   loop: true,
-//   slidesPerView: 1,
-//   slidesPerGroup: 1,
 // });
 
 

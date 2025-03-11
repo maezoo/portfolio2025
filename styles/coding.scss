@@ -1,333 +1,325 @@
 .coding {
-}
-
-.slide {
-  .slide-content {
-    // padding: 2% 10% 0%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-  }
-
-  .mo-content {
-    display: flex;
-    gap: 20px;
-
-    .screen-wrapper {
-      position: relative;
+  .slide {
+    .slide-content {
+      // padding: 2% 10% 0%;
+      width: 100%;
+      height: 100%;
       display: flex;
-      align-items: flex-end;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
 
-      .res-phone {
-        width: 160px;
-        height: 320px;
-        border-radius: 2rem;
-        box-shadow: 9px 2px 10px 0px rgba(0, 0, 0, 0.8);
-        outline: 3px ridge #444444;
-        overflow: hidden;
-        position: absolute;
-        z-index: 2;
-        right: 0;
-        bottom: 0;
-        cursor: pointer;
+    .mo-content {
+      display: flex;
+      gap: 20px;
 
-        &:hover {
-          background-position: 100% 100%;
-        }
-      }
-
-      .spc-phone {
-        background: url(/images/mobile_SPC.jpg) no-repeat;
-        background-size: cover;
-        transition: background-position 3s linear;
-      }
-
-      .cream-phone {
+      .screen-wrapper {
+        position: relative;
         display: flex;
-        flex-direction: column;
+        align-items: flex-end;
 
-        .hd-img {
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
+        .res-phone {
+          width: 160px;
+          height: 320px;
+          border-radius: 2rem;
+          box-shadow: 9px 2px 10px 0px rgba(0, 0, 0, 0.8);
+          outline: 3px ridge #444444;
+          overflow: hidden;
+          position: absolute;
+          z-index: 2;
+          right: 0;
+          bottom: 0;
+          cursor: pointer;
 
-        .slide-img {
-          width: 100%;
-          height: 100%;
-          background: url(/images/phone-cream-slide.JPG) no-repeat;
-          background-size: cover;
-          transition: background-position 2s linear;
           &:hover {
             background-position: 100% 100%;
           }
         }
-      }
 
-      .no-phone {
-        display: none;
-      }
-    }
-  }
-
-  .preview {
-    width: 620px;
-    z-index: 1;
-    padding-bottom: 20px;
-
-    .cloneImg_1 {
-      background: url(/images/full-screen_SPC.JPG) no-repeat;
-      background-size: cover;
-      transition: background-position 2s linear;
-    }
-
-    .cloneImg_cream {
-      background: url(/images/full-screen_cream.jpg) no-repeat;
-      background-size: cover;
-      transition: background-position 2s linear;
-    }
-  }
-
-  .preview-2 {
-    .cloneImg_2 {
-      background: url(/images/full-screen_ckdhc.JPG) no-repeat;
-      background-size: cover;
-      transition: background-position 2s linear;
-    }
-
-    .cloneImg_3 {
-      background: url(/images/full-screen_ulsan-fire.JPG) no-repeat;
-      background-size: cover;
-      transition: background-position 0.8s linear;
-    }
-
-    .cloneImg_4 {
-      background: url(/images/full-screen_suseong.JPG) no-repeat;
-      background-size: cover;
-      transition: background-position 1.5s linear;
-    }
-  }
-
-  .cloneImg {
-    width: 468px;
-    height: 275px;
-    border-radius: 1.6rem;
-    box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
-    filter: grayscale(1) brightness(0.8);
-    cursor: pointer;
-
-    &:hover {
-      background-position: 100% 100%;
-      filter: none;
-    }
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    justify-content: flex-end;
-
-    h3 {
-      font-size: 2.8rem;
-      font-weight: 500;
-    }
-
-    .feature {
-      font-size: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-
-      span {
-        color: #ff6347;
-        // font-weight: 500;
-      }
-    }
-
-    table {
-      font-size: 1.5rem;
-
-      th,
-      td {
-        border: 1px solid black;
-        vertical-align: middle;
-      }
-
-      th {
-        width: 120px;
-      }
-
-      td {
-        width: 230px;
-        padding: 10px 15px 10px 5px;
-      }
-
-      .skills-items {
-        display: flex;
-        gap: 25px;
-      }
-
-      ul {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 5px;
-      }
-    }
-
-    .link_btn {
-      display: flex;
-      gap: 2px;
-      align-items: center;
-
-      button {
-        width: 100px;
-        height: 35px;
-        border-radius: 8px;
-        border: none;
-        box-shadow: 5px 5px 6px rgba(57, 57, 57, 0.344);
-        background-color: rgb(210, 210, 210);
-        transition: all 0.4s ease-in-out;
-        color: rgb(49, 48, 48);
-
-        a {
-          display: block;
-          width: 100%;
-          height: 100%;
-          line-height: 35px;
+        .spc-phone {
+          background: url(/images/mobile_SPC.jpg) no-repeat;
+          background-size: cover;
+          transition: background-position 3s linear;
         }
 
-        &:hover {
-          background-color: white;
-        }
-      }
+        .cream-phone {
+          display: flex;
+          flex-direction: column;
 
-      .http-link {
-        animation: rubberBand 1s linear infinite;
-        display: flex;
-        gap: 10px;
-        align-items: center;
+          .hd-img {
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
 
-        a {
-          width: 40px;
-          height: 40px;
-          display: block;
-
-          img {
+          .slide-img {
             width: 100%;
             height: 100%;
-            border-radius: 5px;
+            background: url(/images/phone-cream-slide.JPG) no-repeat;
+            background-size: cover;
+            transition: background-position 2s linear;
+            &:hover {
+              background-position: 100% 100%;
+            }
           }
+        }
+
+        .no-phone {
+          display: none;
+        }
+      }
+    }
+
+    .preview {
+      width: 620px;
+      z-index: 1;
+      padding-bottom: 20px;
+
+      .cloneImg_1 {
+        background: url(/images/full-screen_SPC.JPG) no-repeat;
+        background-size: cover;
+        transition: background-position 2s linear;
+      }
+
+      .cloneImg_cream {
+        background: url(/images/full-screen_cream.jpg) no-repeat;
+        background-size: cover;
+        transition: background-position 2s linear;
+      }
+    }
+
+    .preview-2 {
+      .cloneImg_2 {
+        background: url(/images/full-screen_ckdhc.JPG) no-repeat;
+        background-size: cover;
+        transition: background-position 2s linear;
+      }
+
+      .cloneImg_3 {
+        background: url(/images/full-screen_ulsan-fire.JPG) no-repeat;
+        background-size: cover;
+        transition: background-position 0.8s linear;
+      }
+
+      .cloneImg_4 {
+        background: url(/images/full-screen_suseong.JPG) no-repeat;
+        background-size: cover;
+        transition: background-position 1.5s linear;
+      }
+    }
+
+    .cloneImg {
+      width: 468px;
+      height: 275px;
+      border-radius: 1.6rem;
+      box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+      filter: grayscale(1) brightness(0.8);
+      cursor: pointer;
+
+      &:hover {
+        background-position: 100% 100%;
+        filter: none;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      justify-content: flex-end;
+
+      h3 {
+        font-size: 2.8rem;
+        font-weight: 500;
+      }
+
+      .feature {
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+          color: #ff6347;
+          // font-weight: 500;
         }
       }
 
-      .btn1 {
-        background-color: #ff6347;
-        margin-right: 7px;
+      table {
+        font-size: 1.5rem;
+
+        th,
+        td {
+          border: 1px solid black;
+          vertical-align: middle;
+        }
+
+        th {
+          width: 120px;
+        }
+
+        td {
+          width: 230px;
+          padding: 10px 15px 10px 5px;
+        }
+
+        .skills-items {
+          display: flex;
+          gap: 25px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 5px;
+        }
+      }
+
+      .link_btn {
+        display: flex;
+        gap: 2px;
+        align-items: center;
+
+        button {
+          width: 100px;
+          height: 35px;
+          border-radius: 8px;
+          border: none;
+          box-shadow: 5px 5px 6px rgba(57, 57, 57, 0.344);
+          background-color: rgb(210, 210, 210);
+          transition: all 0.4s ease-in-out;
+          color: rgb(49, 48, 48);
+
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 35px;
+          }
+
+          &:hover {
+            background-color: white;
+          }
+        }
+
+        .http-link {
+          animation: rubberBand 1s linear infinite;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          a {
+            width: 40px;
+            height: 40px;
+            display: block;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        .btn1 {
+          background-color: #ff6347;
+          margin-right: 7px;
+        }
       }
     }
   }
 }
 
-// .clone_5 {
-//   .section_inner-2 {
-//     padding: 9% 10% 0%;
-//     gap: 30px;
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     justify-content: center;
-//   }
+.clone_5 {
+  .section_inner-2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-//   .mySwiper {
-//     width: 800px;
-//     height: 465px;
-//     position: relative;
+  .mySwiper {
+    width: 800px;
+    height: 465px;
+    height: 500px;
+    position: relative;
 
-//     .swiper-wrapper {
-//       .swiper-slide {
-//         height: 450px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         gap: 20px;
+    .swiper-wrapper {
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        justify-content: flex-start;
 
-//         .img-wrap {
-//           width: 600px;
-//           height: 360px;
-//           border-radius: 2.6rem;
-//           overflow: hidden;
-//           box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+        h2 {
+          font-size: 1.6rem;
+          margin-top: 15px;
+        }
+        .project-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
 
-//           img {
-//             width: 100%;
-//             height: 100%;
-//           }
-//         }
+          button {
+            width: 115px;
+            height: 25px;
+          }
+        }
+      }
 
-//         .sqa img {
-//           transform: scale(1, 1.15);
-//           object-fit: cover;
-//         }
+      .img-wrap {
+        width: 600px;
+        height: 360px;
+        border-radius: 2.6rem;
+        overflow: hidden;
+        box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
 
-//         button {
-//           width: 150px;
-//           height: 40px;
-//           border-radius: 8px;
-//           border: none;
-//           box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.4);
-//           background-color: rgb(210, 210, 210);
-//           transition: 0.4s ease-in-out;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
 
-//           a {
-//             display: block;
-//             width: 100%;
-//             height: 100%;
-//             line-height: 40px;
-//           }
+      .sqa img {
+        transform: scale(1, 1.15);
+        object-fit: cover;
+      }
+    }
 
-//           &:hover {
-//             background-color: white;
-//           }
-//         }
-//       }
-//     }
+    .swiper-button-next,
+    .swiper-button-prev {
+      filter: invert(80%);
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      top: 230px;
+    }
 
-//     .swiper-button-next,
-//     .swiper-button-prev {
-//       filter: invert(70%);
-//       width: 45px;
-//       height: 45px;
-//       position: absolute;
-//       top: 200px;
-//     }
+    .swiper-button-prev {
+      background: url(/images/arrow-left.svg) no-repeat;
+    }
 
-//     .swiper-button-prev {
-//       background: url(/images/arrow-left.svg) no-repeat;
-//     }
+    .swiper-button-next {
+      background: url(/images/arrow-right.svg) no-repeat;
+    }
 
-//     .swiper-button-next {
-//       background: url(/images/arrow-right.svg) no-repeat;
-//     }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      display: none;
+    }
+  }
 
-//     .swiper-button-next:after,
-//     .swiper-button-prev:after {
-//       display: none;
-//     }
-//   }
-
-//   .swiper-pagination {
-//     font-size: 1.4rem;
-//     position: absolute;
-//     bottom: 0px;
-//   }
-// }
+  .swiper-pagination {
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 0px;
+  }
+}

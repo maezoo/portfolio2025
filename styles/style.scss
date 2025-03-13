@@ -84,6 +84,11 @@ main {
 }
 
 .fp-slidesNav.fp-bottom {
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
   span {
     background-color: white;
   }

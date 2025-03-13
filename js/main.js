@@ -5,6 +5,7 @@ var myFullpage = new fullpage('#fullpage', {
     '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-right">'
   ],
   licenseKey: 'xxxxxxxxxxxxxxxxxxxxxxxxx',
+  anchors: ['coding', 'design', 'aboutMe'],
   scrollBar: false,
   slidesNavigation: true,
   slidesNavigationPosition: 'bottom',

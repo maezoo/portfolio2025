@@ -1,8 +1,8 @@
 .design {
+  padding-top: 10px;
 }
 
 .design-content {
-  // padding: 12% 10% 5%;
   width: 100%;
   height: 100%;
   display: flex;
@@ -68,14 +68,16 @@
 }
 
 .pop-up {
+  // position: relative;
+
   .detail_pop {
+    display: none;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99999;
+    z-index: 99999999;
     align-items: flex-start;
     justify-content: center;
 

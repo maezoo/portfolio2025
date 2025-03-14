@@ -42,22 +42,19 @@ designIphone.forEach(item => {
 
     if (targetPopUp) {
       targetPopUp.classList.add('show');
+      header.classList.add('hide');
       disableScrolling();
     }
   });
 });
 
 
-
-
 // 팝업 닫기
 designPopUp.forEach(showPop => {
   showPop.addEventListener('click', (event) => {
-    // 팝업 외부를 클릭했을 때 닫기
-    if (event.target === showPop) {
-      showPop.classList.remove('show');
-      enableScrolling();
-    }
+    showPop.classList.remove('show');
+    header.classList.remove('hide');
+    enableScrolling();
   });
 });
 

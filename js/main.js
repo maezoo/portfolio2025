@@ -30,26 +30,34 @@ const enableScrolling = () => {
   }
 };
 
-document.querySelectorAll('.design_box').forEach(item => {
+const designIphone = document.querySelectorAll('.design_box');
+const designPopUp = document.querySelectorAll('.design-pop-up');
+const header = document.querySelector('header');
+
+// 팝업 열기
+designIphone.forEach(item => {
   item.addEventListener('click', () => {
-    document.querySelectorAll('.detail_pop').forEach(pop => {
-      pop.style.display = 'none';
-    });
+    const targetImg = item.getAttribute('data-target');
+    const targetPopUp = document.querySelector(`#${targetImg}`);
 
-    const tab = item.getAttribute('data-tab');
-    const popUp = document.querySelector(`#${tab}`);
-    popUp.style.display = 'flex';
-
-    disableScrolling(); // 열기 콜백
+    if (targetPopUp) {
+      targetPopUp.classList.add('show');
+      disableScrolling();
+    }
   });
 });
 
-document.querySelectorAll('.detail_pop').forEach(closeBtn => {
-  closeBtn.addEventListener('click', (event) => {
-    const popUp = event.target.closest('.detail_pop');
-    popUp.style.display = 'none';
 
-    enableScrolling(); // 닫기 콜백
+
+
+// 팝업 닫기
+designPopUp.forEach(showPop => {
+  showPop.addEventListener('click', (event) => {
+    // 팝업 외부를 클릭했을 때 닫기
+    if (event.target === showPop) {
+      showPop.classList.remove('show');
+      enableScrolling();
+    }
   });
 });
 

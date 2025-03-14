@@ -8,6 +8,7 @@ header {
   padding: 0 10%;
   transform: translateY(0%);
   transition: transform 0.5s ease;
+
   .header-inner {
     width: 100%;
     height: 100%;
@@ -41,8 +42,8 @@ header {
 
     .gnb_list {
       letter-spacing: 2px;
-
       a {
+        transition: color 0.3s ease;
         &:hover {
           color: #ec3b00;
         }

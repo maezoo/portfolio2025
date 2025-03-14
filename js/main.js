@@ -8,9 +8,22 @@ var myFullpage = new fullpage('#fullpage', {
   anchors: ['coding', 'design', 'aboutMe'],
   scrollBar: false,
   slidesNavigation: true,
-  slidesNavigationPosition: 'bottom',
-
+  onLeave: function (origin, destination, direction) {
+    const goTopBtn = document.querySelector('.go-top');
+    if (destination.index === 2) {
+      goTopBtn.classList.add('showUp');
+    } else {
+      goTopBtn.classList.remove('showUp');
+    }
+  }
 });
+
+const goTopBtn = document.querySelector('.go-top');
+if (goTopBtn) {
+  goTopBtn.addEventListener('click', function () {
+    fullpage_api.moveTo('coding'); // 'coding' 앵커로 이동
+  });
+}
 
 // =======================================================
 // 팝업 열기 + 닫기 =========================================
@@ -70,9 +83,9 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // autoplay: {
-  //   delay: 10000,
-  // },
+  autoplay: {
+    delay: 10000,
+  },
   keyboard: true,
   loop: true,
   slidesPerView: 1,

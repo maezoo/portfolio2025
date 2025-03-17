@@ -2,15 +2,15 @@
 }
 
 .aboutMe-content {
-  padding-bottom: 60px;
+  padding-top: 60px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  justify-content: flex-end;
-  // justify-content: center;
+  // justify-content: flex-end;
+  justify-content: center;
 }
 
 .meBox_wrapper {
@@ -180,10 +180,12 @@
   justify-content: center;
   position: absolute;
   z-index: 9999;
-  left: 17.5%;
+  right: 50px;
+  bottom: -50px;
   cursor: pointer;
   opacity: 0;
-  transform: translateY(100px);
+  // left: 17.5%;
+  // transform: translateY(100px);
 
   img {
     width: 20px;
@@ -191,8 +193,36 @@
   }
 }
 
+// .go-top.showUp {
+//   transform: translateY(-100px);
+//   transition: transform 0.7s ease-out;
+//   transition-delay: 0.8s;
+//   // animation-delay: 0.8s;
+//   animation: bounceInUp 0.7s ease-out;
+// }
+
 .go-top.showUp {
-  transform: translateY(-5px);
-  transition: transform 1s ease-in;
   opacity: 1;
+  // animation: bounceInUp 0.8s ease-out 0.8s forwards;
+  animation: bounceInUp 1s cubic-bezier(0.33, 1, 0.68, 1) 0.8s forwards;
+}
+
+@keyframes bounceInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-110px); /* 조금 더 튕기기 */
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-95px); /* 내려오면서 부드럽게 조정 */
+  }
+  90% {
+    transform: translateY(-103px); /* 다시 튕기기 */
+  }
+  100% {
+    transform: translateY(-100px); /* 최종 고정 */
+  }
 }

@@ -1,29 +1,81 @@
-var myFullpage = new fullpage('#fullpage', {
+var myFullpage = new fullpage("#fullpage", {
   controlArrows: true,
   controlArrowsHTML: [
-    '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-left">',
-    '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-right">'
+    '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-left"></i></div>',
+    '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-right"></i></div>'
   ],
-  licenseKey: 'xxxxxxxxxxxxxxxxxxxxxxxxx',
-  anchors: ['coding', 'design', 'aboutMe'],
+  anchors: ["coding", "design", "aboutMe"],
   scrollBar: false,
   slidesNavigation: true,
+
   onLeave: function (origin, destination, direction) {
-    const goTopBtn = document.querySelector('.go-top');
+    const goTopBtn = document.querySelector(".go-top");
+
     if (destination.index === 2) {
-      goTopBtn.classList.add('showUp');
+      goTopBtn.classList.add("showUp");
     } else {
-      goTopBtn.classList.remove('showUp');
+      goTopBtn.classList.remove("showUp");
     }
   }
 });
 
-const goTopBtn = document.querySelector('.go-top');
+const goTopBtn = document.querySelector(".go-top");
 if (goTopBtn) {
-  goTopBtn.addEventListener('click', function () {
-    fullpage_api.moveTo('coding'); // 'coding' 앵커로 이동
+  goTopBtn.addEventListener("click", function () {
+    fullpage_api.moveTo("coding");
   });
 }
+
+
+const arrowNext = document.querySelector(".fp-controlArrow.fp-next");
+const arrowPrev = document.querySelector(".fp-controlArrow.fp-prev");
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+    arrowNext.classList.add("hover");
+
+    setTimeout(() => {
+      arrowNext.classList.remove("hover");
+    }, 1000);
+  }
+
+  if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+    arrowPrev.classList.add("hover");
+
+    setTimeout(() => {
+      arrowPrev.classList.remove("hover");
+    }, 1000);
+  }
+});
+
+
+
+// =====================
+// var myFullpage = new fullpage('#fullpage', {
+//   controlArrows: true,
+//   controlArrowsHTML: [
+//     '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-left"></i></div>',
+//     '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-rigth"></i></div>'
+//   ],
+//   anchors: ['coding', 'design', 'aboutMe'],
+//   scrollBar: false,
+//   slidesNavigation: true,
+//   onLeave: function (origin, destination, direction) {
+//     const goTopBtn = document.querySelector('.go-top');
+//     if (destination.index === 2) {
+//       goTopBtn.classList.add('showUp');
+//     } else {
+//       goTopBtn.classList.remove('showUp');
+//     }
+//   },
+// });
+
+// const goTopBtn = document.querySelector('.go-top');
+// if (goTopBtn) {
+//   goTopBtn.addEventListener('click', function () {
+//     fullpage_api.moveTo('coding'); // 'coding' 앵커로 이동
+//   });
+// }
 
 // =======================================================
 // 팝업 열기 + 닫기 =========================================
@@ -285,3 +337,33 @@ var swiper = new Swiper(".mySwiper", {
 // //     moMenu.classList.remove('show');
 // //   });
 // // });
+
+// 키보드 이벤트와 화살표 호버 효과 연동
+document.addEventListener('keydown', function (event) {
+  const arrowNext = document.querySelector(".fp-controlArrow.fp-next");
+  const arrowPrev = document.querySelector(".fp-controlArrow.fp-prev");
+
+  // 오른쪽 화살표 키 (→, 39) 또는 D 키 (68)
+  if (event.keyCode === 39 || event.keyCode === 68) {
+    if (arrowNext) {
+      arrowNext.classList.add('hover');
+
+      // 잠시 후 호버 효과 제거
+      setTimeout(() => {
+        arrowNext.classList.remove('hover');
+      }, 500);
+    }
+  }
+
+  // 왼쪽 화살표 키 (←, 37) 또는 A 키 (65)
+  if (event.keyCode === 37 || event.keyCode === 65) {
+    if (arrowPrev) {
+      arrowPrev.classList.add('hover');
+
+      // 잠시 후 호버 효과 제거
+      setTimeout(() => {
+        arrowPrev.classList.remove('hover');
+      }, 500);
+    }
+  }
+});

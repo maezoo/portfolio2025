@@ -102,21 +102,8 @@ main {
 
 // ======================================
 
-h1 {
-  //   font-size: calc(2em + 2vw);
-  //   margin: 0;
-}
-
 .fp-section:nth-child(1) {
   background-image: linear-gradient(128deg, #40afff, #3f61ff);
-  // background: url("/images/white-floor.jpeg") no-repeat;
-  // background: url("/images/back1.jpg") no-repeat;
-  // width: 100%;
-  // height: 100%;
-  // background-size: contain;
-  // background-size: cover;
-  // background-position: center;
-  // transform: background rotate(90deg);
 }
 
 .fp-section:nth-child(2) {
@@ -130,4 +117,27 @@ h1 {
 /* Custom arrow styles */
 .my-arrow {
   font-size: 4em;
+}
+
+// =================================================
+// =================================================
+
+.fp-controlArrow.fp-prev {
+  border-color: transparent rgba(255, 255, 255, 0.5) transparent transparent;
+  transition: all 0.3s ease;
+}
+
+.fp-controlArrow.fp-prev:hover,
+.fp-controlArrow.fp-prev.hover {
+  border-color: transparent #fff transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.fp-controlArrow.fp-next:hover,
+.fp-controlArrow.fp-next.hover {
+  border-color: transparent transparent transparent #fff;
 }

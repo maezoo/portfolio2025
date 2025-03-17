@@ -134,24 +134,23 @@
 
       ul {
         display: flex;
-        gap: 5px;
-        // flex-wrap: wrap;
+        gap: 8px;
 
         li {
           display: flex;
-          gap: 5px;
+          gap: 8px;
 
           img {
-            width: 60px;
-            height: 65px;
+            width: 50px;
+            height: 55px;
             object-fit: contain;
           }
         }
 
         .jq {
           img {
-            width: 50px;
-            height: 60px;
+            width: 40px;
+            height: 50px;
             object-fit: contain;
           }
         }
@@ -184,8 +183,6 @@
   bottom: -50px;
   cursor: pointer;
   opacity: 0;
-  // left: 17.5%;
-  // transform: translateY(100px);
 
   img {
     width: 20px;
@@ -193,17 +190,8 @@
   }
 }
 
-// .go-top.showUp {
-//   transform: translateY(-100px);
-//   transition: transform 0.7s ease-out;
-//   transition-delay: 0.8s;
-//   // animation-delay: 0.8s;
-//   animation: bounceInUp 0.7s ease-out;
-// }
-
 .go-top.showUp {
   opacity: 1;
-  // animation: bounceInUp 0.8s ease-out 0.8s forwards;
   animation: bounceInUp 1s cubic-bezier(0.33, 1, 0.68, 1) 0.8s forwards;
 }
 
@@ -213,16 +201,16 @@
     opacity: 0;
   }
   50% {
-    transform: translateY(-110px); /* 조금 더 튕기기 */
+    transform: translateY(-110px);
     opacity: 1;
   }
   75% {
-    transform: translateY(-95px); /* 내려오면서 부드럽게 조정 */
+    transform: translateY(-95px);
   }
   90% {
-    transform: translateY(-103px); /* 다시 튕기기 */
+    transform: translateY(-103px);
   }
   100% {
-    transform: translateY(-100px); /* 최종 고정 */
+    transform: translateY(-100px);
   }
 }

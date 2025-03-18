@@ -26,7 +26,6 @@ if (goTopBtn) {
   });
 }
 
-
 const arrowNext = document.querySelector(".fp-controlArrow.fp-next");
 const arrowPrev = document.querySelector(".fp-controlArrow.fp-prev");
 
@@ -47,35 +46,6 @@ document.addEventListener("keydown", (e) => {
     }, 1000);
   }
 });
-
-
-
-// =====================
-// var myFullpage = new fullpage('#fullpage', {
-//   controlArrows: true,
-//   controlArrowsHTML: [
-//     '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-left"></i></div>',
-//     '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-rigth"></i></div>'
-//   ],
-//   anchors: ['coding', 'design', 'aboutMe'],
-//   scrollBar: false,
-//   slidesNavigation: true,
-//   onLeave: function (origin, destination, direction) {
-//     const goTopBtn = document.querySelector('.go-top');
-//     if (destination.index === 2) {
-//       goTopBtn.classList.add('showUp');
-//     } else {
-//       goTopBtn.classList.remove('showUp');
-//     }
-//   },
-// });
-
-// const goTopBtn = document.querySelector('.go-top');
-// if (goTopBtn) {
-//   goTopBtn.addEventListener('click', function () {
-//     fullpage_api.moveTo('coding'); // 'coding' 앵커로 이동
-//   });
-// }
 
 // =======================================================
 // 팝업 열기 + 닫기 =========================================

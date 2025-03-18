@@ -104,6 +104,27 @@ main {
 
 .fp-section:nth-child(1) {
   background-image: linear-gradient(128deg, #40afff, #3f61ff);
+  // background-image: linear-gradient(
+  //   to right,
+  //   #f78ca0 0%,
+  //   #f9748f 19%,
+  //   #fd868c 60%,
+  //   #a28bfe 100%
+  // );
+  background-size: 400% 400%;
+  // animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .fp-section:nth-child(2) {

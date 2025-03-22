@@ -4,14 +4,14 @@ var myFullpage = new fullpage("#fullpage", {
     '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-left"></i></div>',
     '<div class="my-arrow"><i class="fas fa-arrow-alt-circle-right"></i></div>'
   ],
-  anchors: ["coding", "design", "aboutMe"],
+  anchors: ["intro", "coding", "design", "aboutMe"],
   scrollBar: false,
   slidesNavigation: true,
 
   onLeave: function (origin, destination, direction) {
     const goTopBtn = document.querySelector(".go-top");
 
-    if (destination.index === 2) {
+    if (destination.index === 3) {
       goTopBtn.classList.add("showUp");
     } else {
       goTopBtn.classList.remove("showUp");
@@ -22,7 +22,7 @@ var myFullpage = new fullpage("#fullpage", {
 const goTopBtn = document.querySelector(".go-top");
 if (goTopBtn) {
   goTopBtn.addEventListener("click", function () {
-    fullpage_api.moveTo("coding");
+    fullpage_api.moveTo("intro");
   });
 }
 
@@ -114,41 +114,6 @@ var swiper = new Swiper(".mySwiper", {
   slidesPerGroup: 1,
 });
 
-// function setViewportHeight() {
-//   let vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// }
-
-// setViewportHeight();
-
-// window.addEventListener('resize', setViewportHeight);
-
-
-// // =======================================================
-// // coding fullpage ========================================
-// $(document).ready(function () {
-//   $('#fullpage').fullpage({
-//     navigation: true,
-//     scrollingSpeed: 500,
-//     licenseKey: 'YOUR_LICENSE_KEY',
-//     responsiveWidth: 768,
-
-//     onLeave: function (origin, destination, direction) {
-//       const goTopBtn = document.querySelector('.go-top');
-//       if (destination.index === 5) {
-//         goTopBtn.classList.add('move');
-//       } else {
-//         goTopBtn.classList.remove('move');
-//       }
-//     }
-//   });
-
-//   const goTopBtn = document.querySelector('.go-top');
-//   goTopBtn.addEventListener('click', function () {
-//     $.fn.fullpage.moveTo(1);
-//   });
-// });
-
 
 // // =======================================================
 // // 인트로 화면전환 ===========================================
@@ -207,61 +172,6 @@ var swiper = new Swiper(".mySwiper", {
 //   });
 // });
 
-// // mo-menu ========================================
-// const moItems = document.querySelectorAll('.mo-item');
-// const moMenu = document.querySelector('.mo-menu');
-// const moBtn = document.querySelector('.mobile-btn');
-
-// // 모바일 버튼 클릭 시 메뉴 토글
-// moBtn.addEventListener('click', function () {
-//   moMenu.classList.toggle('show');
-// });
-
-// moItems.forEach((item, index) => {
-//   item.addEventListener('click', function () {
-//     sectionTabs.forEach(tab => {
-//       tab.style.display = 'none';
-//     });
-
-//     sectionTabs[index].style.display = 'block';
-
-//     moMenu.classList.remove('show');
-//   });
-// });
-// // function setViewportHeight() {
-// //   let vh = window.innerHeight * 0.01;
-// //   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// // }
-
-// // setViewportHeight();
-
-// // window.addEventListener('resize', setViewportHeight);
-// // // =======================================================
-// // // coding fullpage ========================================
-// // $(document).ready(function () {
-// //   $('#fullpage').fullpage({
-// //     navigation: true,
-// //     scrollingSpeed: 500,
-// //     licenseKey: 'YOUR_LICENSE_KEY',
-// //     responsiveWidth: 768,
-
-// //     onLeave: function (origin, destination, direction) {
-// //       const goTopBtn = document.querySelector('.go-top');
-// //       if (destination.index === 5) {
-// //         goTopBtn.classList.add('move');
-// //       } else {
-// //         goTopBtn.classList.remove('move');
-// //       }
-// //     }
-// //   });
-
-// //   const goTopBtn = document.querySelector('.go-top');
-// //   goTopBtn.addEventListener('click', function () {
-// //     $.fn.fullpage.moveTo(1);
-// //   });
-// // });
-
-
 // // // =============================================================
 // // menuItems.forEach(button => {
 // //   button.addEventListener('click', function () {
@@ -308,32 +218,3 @@ var swiper = new Swiper(".mySwiper", {
 // //   });
 // // });
 
-// 키보드 이벤트와 화살표 호버 효과 연동
-document.addEventListener('keydown', function (event) {
-  const arrowNext = document.querySelector(".fp-controlArrow.fp-next");
-  const arrowPrev = document.querySelector(".fp-controlArrow.fp-prev");
-
-  // 오른쪽 화살표 키 (→, 39) 또는 D 키 (68)
-  if (event.keyCode === 39 || event.keyCode === 68) {
-    if (arrowNext) {
-      arrowNext.classList.add('hover');
-
-      // 잠시 후 호버 효과 제거
-      setTimeout(() => {
-        arrowNext.classList.remove('hover');
-      }, 500);
-    }
-  }
-
-  // 왼쪽 화살표 키 (←, 37) 또는 A 키 (65)
-  if (event.keyCode === 37 || event.keyCode === 65) {
-    if (arrowPrev) {
-      arrowPrev.classList.add('hover');
-
-      // 잠시 후 호버 효과 제거
-      setTimeout(() => {
-        arrowPrev.classList.remove('hover');
-      }, 500);
-    }
-  }
-});

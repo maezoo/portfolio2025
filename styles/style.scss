@@ -49,6 +49,42 @@ body {
 
 main {
   width: 100%;
+  height: 100%;
+
+  // .light-ray {
+  //   // width: 3px;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 8%;
+  //   z-index: 100000;
+  //   height: 100%;
+  //   overflow: hidden;
+
+  //   .line {
+  //     background-color: rgb(255, 255, 255);
+  //     width: 3px;
+  //     height: 100%;
+  //     overflow: hidden;
+
+  //     .light {
+  //       background-color: rgb(195, 39, 39);
+  //       // width: 3px;
+  //       // height: 100%;
+  //       animation: light 1s infinite;
+  //       // animation: light 4.5s forwards;
+
+  //       @keyframes light {
+  //         0% {
+  //           transform: translateY(0%);
+  //         }
+
+  //         100% {
+  //           transform: translateY(100%);
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
 // ================ 공통클래스 =========================
 .tab_title {
@@ -101,9 +137,27 @@ main {
 }
 
 // ======================================
-
 .fp-section:nth-child(1) {
-  background-image: linear-gradient(128deg, #40afff, #3f61ff);
+  // background-image: linear-gradient(#f46a6f 0%, #fad0c4 60%, #fad0c4 100%);
+  // background-image: #f46a6f;
+  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+}
+
+.fp-section:nth-child(2) {
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   #fff1eb 0%,
+  //   #ace0f9 60%,
+  //   #fad0c4 100%
+  // );
+  // background-image: linear-gradient(128deg, #40afff, #3f61ff);
+  // background-image: linear-gradient(to bottom, #ace0f9, #40afff, #3f61ff);
+  background-image: linear-gradient(
+    to bottom,
+    #ace0f9 5%,
+    #40afff 65%,
+    #3f61ff 100%
+  );
   // background-image: linear-gradient(
   //   to right,
   //   #f78ca0 0%,
@@ -111,7 +165,7 @@ main {
   //   #fd868c 60%,
   //   #a28bfe 100%
   // );
-  background-size: 400% 400%;
+  // background-size: 400% 400%;
   // animation: gradientMove 3s ease infinite;
 }
 
@@ -127,11 +181,17 @@ main {
   }
 }
 
-.fp-section:nth-child(2) {
+.fp-section:nth-child(3) {
   background-image: linear-gradient(128deg, #ff9a3f, #ff4b40);
+  background-image: linear-gradient(
+    -225deg,
+    #69eacb 0%,
+    #eaccf8 48%,
+    #6654f1 100%
+  );
 }
 
-.fp-section:nth-child(3) {
+.fp-section:nth-child(4) {
   background-image: linear-gradient(128deg, #fc40ff, #543fff);
 }
 

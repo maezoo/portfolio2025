@@ -13,28 +13,29 @@ var myFullpage = new fullpage("#fullpage", {
     const header = document.querySelector("header");
     const logo = document.querySelector(".logo");
 
-
-    // Go Top 버튼 처리
+    // Go Top 버튼 처리 =================================
     if (destination.index === 3) {
       goTopBtn.classList.add("showUp");
     } else {
       goTopBtn.classList.remove("showUp");
     }
 
-    // 헤더 숨김 처리
+    // 헤더 숨김 처리 =================================
     if (destination.index === 0) {
-      header.classList.add("hide");
-    } else {
       header.classList.remove("hide");
+
+    } else {
+      header.classList.add("hide");
     }
 
+    // =============================================
     logo.addEventListener("click", function () {
       fullpage_api.moveTo("intro");
     });
   }
 });
 
-
+// =============================================
 const goTopBtn = document.querySelector(".go-top");
 
 if (goTopBtn) {
@@ -43,6 +44,7 @@ if (goTopBtn) {
   });
 }
 
+// =============================================
 const arrowNext = document.querySelector(".fp-controlArrow.fp-next");
 const arrowPrev = document.querySelector(".fp-controlArrow.fp-prev");
 
@@ -63,7 +65,6 @@ document.addEventListener("keydown", (e) => {
     }, 1000);
   }
 });
-
 
 // =======================================================
 // 팝업 열기 + 닫기 =========================================
@@ -95,7 +96,7 @@ designIphone.forEach(item => {
 
     if (targetPopUp) {
       targetPopUp.classList.add('show');
-      header.classList.add('hide');
+      header.classList.remove('hide');
       disableScrolling();
     }
   });
@@ -106,7 +107,7 @@ designIphone.forEach(item => {
 designPopUp.forEach(showPop => {
   showPop.addEventListener('click', (event) => {
     showPop.classList.remove('show');
-    header.classList.remove('hide');
+    header.classList.add('hide');
     enableScrolling();
   });
 });

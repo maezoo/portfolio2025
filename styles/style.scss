@@ -45,6 +45,7 @@ body {
   color: #fff;
   width: 100vw;
   // overflow-x: hidden;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 }
 
 main {
@@ -85,6 +86,10 @@ main {
   //     }
   //   }
   // }
+}
+#fullpage {
+  width: 100%;
+  height: 100%;
 }
 
 // ================ 공통클래스 =========================
@@ -138,56 +143,49 @@ main {
 }
 
 // ======================================
-.fp-section:nth-child(1) {
-  // background-image: linear-gradient(#f46a6f 0%, #fad0c4 60%, #fad0c4 100%);
-  // background-image: #f46a6f;
-  background-image: linear-gradient(
-    to bottom,
-    #d8b2f5 0%,
-    #f6f3ff 55%,
-    #e8f6fc 70%,
-    #ace0f9 100%
-  );
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-}
+// .fp-section:nth-child(1) {
+//   background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+//   // background-size: 250% 250%;
+//   // animation: gradientMove 3s ease infinite;
+// }
 
-.fp-section:nth-child(2) {
-  background-image: linear-gradient(
-    to bottom,
-    #ace0f9 5%,
-    #40afff 65%,
-    #3f61ff 100%
-  );
+// @keyframes gradientMove {
+//   0% {
+//     background-position: 100% 100%;
+//   }
+//   50% {
+//     background-position: 50% 50%;
+//   }
+//   100% {
+//     background-position: 0% 0%;
+//   }
+// }
 
-  // background-size: 400% 400%;
-  // animation: gradientMove 3s ease infinite;
-}
+// .fp-section:nth-child(2) {
+//   background-image: linear-gradient(
+//     to bottom,
+//     #ace0f9 5%,
+//     #40afff 65%,
+//     #3f61ff 100%
+//   );
+//   background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+//   background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+//   background-image: linear-gradient(-225deg, #20e2d7 0%, #f9fea5 100%);
+// }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 100% 100%;
-  }
-  50% {
-    background-position: 50% 50%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
+// .fp-section:nth-child(3) {
+//   background-image: linear-gradient(128deg, #ff9a3f, #ff4b40);
+//   background-image: linear-gradient(
+//     -225deg,
+//     #69eacb 0%,
+//     #eaccf8 48%,
+//     #6654f1 100%
+//   );
+// }
 
-.fp-section:nth-child(3) {
-  background-image: linear-gradient(128deg, #ff9a3f, #ff4b40);
-  background-image: linear-gradient(
-    -225deg,
-    #69eacb 0%,
-    #eaccf8 48%,
-    #6654f1 100%
-  );
-}
-
-.fp-section:nth-child(4) {
-  background-image: linear-gradient(128deg, #fc40ff, #543fff);
-}
+// .fp-section:nth-child(4) {
+//   background-image: linear-gradient(128deg, #fc40ff, #543fff);
+// }
 
 /* Custom arrow styles */
 .my-arrow {

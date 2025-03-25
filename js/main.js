@@ -10,16 +10,33 @@ var myFullpage = new fullpage("#fullpage", {
 
   onLeave: function (origin, destination, direction) {
     const goTopBtn = document.querySelector(".go-top");
+    const header = document.querySelector("header");
+    const logo = document.querySelector(".logo");
 
+
+    // Go Top 버튼 처리
     if (destination.index === 3) {
       goTopBtn.classList.add("showUp");
     } else {
       goTopBtn.classList.remove("showUp");
     }
+
+    // 헤더 숨김 처리
+    if (destination.index === 0) {
+      header.classList.add("hide");
+    } else {
+      header.classList.remove("hide");
+    }
+
+    logo.addEventListener("click", function () {
+      fullpage_api.moveTo("intro");
+    });
   }
 });
 
+
 const goTopBtn = document.querySelector(".go-top");
+
 if (goTopBtn) {
   goTopBtn.addEventListener("click", function () {
     fullpage_api.moveTo("intro");
@@ -46,6 +63,7 @@ document.addEventListener("keydown", (e) => {
     }, 1000);
   }
 });
+
 
 // =======================================================
 // 팝업 열기 + 닫기 =========================================
@@ -122,7 +140,7 @@ var swiper = new Swiper(".mySwiper", {
 // const firstTabs = document.querySelectorAll('.firstPage');
 // const clickClick = document.querySelector('.intro-click');
 // const clickLogo = document.querySelector('.logo');
-// const menuItems = document.querySelectorAll('.gnb_list');
+// const menuItems = document.querySelectorAll('._list');
 // const sectionTabs = document.querySelectorAll('.tab_item');
 
 // // 클릭 or 애니메이션 끝날 시

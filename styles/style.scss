@@ -86,6 +86,7 @@ main {
   //   }
   // }
 }
+
 // ================ 공통클래스 =========================
 .tab_title {
   font-size: 5rem;
@@ -140,31 +141,24 @@ main {
 .fp-section:nth-child(1) {
   // background-image: linear-gradient(#f46a6f 0%, #fad0c4 60%, #fad0c4 100%);
   // background-image: #f46a6f;
-  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+  background-image: linear-gradient(
+    to bottom,
+    #d8b2f5 0%,
+    #f6f3ff 55%,
+    #e8f6fc 70%,
+    #ace0f9 100%
+  );
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 }
 
 .fp-section:nth-child(2) {
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   #fff1eb 0%,
-  //   #ace0f9 60%,
-  //   #fad0c4 100%
-  // );
-  // background-image: linear-gradient(128deg, #40afff, #3f61ff);
-  // background-image: linear-gradient(to bottom, #ace0f9, #40afff, #3f61ff);
   background-image: linear-gradient(
     to bottom,
     #ace0f9 5%,
     #40afff 65%,
     #3f61ff 100%
   );
-  // background-image: linear-gradient(
-  //   to right,
-  //   #f78ca0 0%,
-  //   #f9748f 19%,
-  //   #fd868c 60%,
-  //   #a28bfe 100%
-  // );
+
   // background-size: 400% 400%;
   // animation: gradientMove 3s ease infinite;
 }
